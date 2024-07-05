@@ -1,0 +1,27 @@
+<div *ngIf="applicationNode" class="main-section">
+    <div class="flex-container">
+        <div>
+            <ur-dialog-input [type]="'text'" [label]="'presenter.robotIP-input-description' | translate"
+                [value]="applicationNode.robotIP" (valueChanged)="saveNode()" #robotIP></ur-dialog-input>
+        </div>
+        <div>
+            <ur-label [label]="'&nbsp;'" [required]="false" [size]="'large'"></ur-label>
+        </div>
+        <div>
+            <ur-label [label]="'&nbsp;'" [required]="false" [size]="'large'"></ur-label>
+        </div>
+        <div>
+            <ur-dialog-input [type]="'number'" [label]="'presenter.port-input-description' | translate"
+                [value]="applicationNode.port" (valueChanged)="saveNode()" #port></ur-dialog-input>
+        </div>
+        <div>
+            <ur-label [label]="'&nbsp;'" [required]="false" [size]="'large'"></ur-label>
+        </div>
+        <div>
+            <ur-label [label]="'&nbsp;&nbsp;'" [required]="false" [size]="'large'"></ur-label>
+        </div>
+        <ur-button (handleClick)="writeParam(port.value, robotIP.value)" [type]="'cta'" class="button">
+            {{'presenter.confirm-button' | translate}}
+        </ur-button>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+@import '../../../styles.scss';
+
+.component {
+  .section {
+    padding: 0.5rem 0.5rem 1rem;
+  }
+}
+
+.flex-container {
+  display: flex;
+  align-content: flex-start; 
+  padding: 0.5rem 0.5rem 1rem;
+}
