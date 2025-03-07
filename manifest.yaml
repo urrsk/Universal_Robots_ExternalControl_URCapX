@@ -5,13 +5,14 @@ metadata:
   urcapName: "external-control"
   version: 0.1.0
   contactInfo: Energivej 51, 5260 Odense S, Denmark
-  description: Enable External Control from e.g. the ROS2 driver
+  description: Enable External Control for e.g. the ROS2 driver
   copyright: Copyright (c) 2024 Universal Robots. All rights reserved.
   licenseType: BSD-3-Clause license
 artifacts:
   webArchives:
   - id: external-control-frontend
     folder: external-control-frontend
+    #devUrl: http://host.gateway.ip:4200/
   containers:
   - id: external-control-backend
     image: external-control-backend:latest

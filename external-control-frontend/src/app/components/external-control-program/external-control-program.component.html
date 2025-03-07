@@ -1,10 +1,10 @@
 <div *ngIf="contributedNode" class="flex-container">
     <div class="flex-row">
-        <ur-label [label]="'Being externally controlled on'" [required]="false" [size]="'large'"></ur-label>
+        <ur-label [label]="'Update program from'" [required]="false" [size]="'large'"></ur-label>
         <ur-label [label]="'&nbsp;'" [required]="false" [size]="'large'"></ur-label>
-        <ur-label [label]="getIPDisplay()" [required]="false" [size]="'large'"></ur-label>
+        <ur-label [label]="ipDisplay()" [required]="false" [size]="'large'"></ur-label>
         <ur-label [label]="':'" [required]="false" [size]="'large'"></ur-label>
-        <ur-label [label]="getPortDisplay()" [required]="false" [size]="'large'"></ur-label>
+        <ur-label [label]="portDisplay()" [required]="false" [size]="'large'"></ur-label>
         <ur-label
             [label]="'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'"
             [required]="false" [size]="'large'"></ur-label>
