@@ -1,0 +1,48 @@
+name: Build and Test
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+
+    - name: Set up Chrome for Karma tests
+      uses: browser-actions/setup-chrome@v1
+
+    - name: Configure npm registry
+      run: |
+        npm config set @universal-robots:registry https://pkgs.dev.azure.com/polyscopex/api/_packaging/polyscopex/npm/registry/
+        npm config set strict-ssl false
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build project
+      run: npm run build
+
+    - name: Run frontend tests
+      working-directory: external-control-frontend
+      run: npm run test
+
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: external-control-urcapx
+        path: target/external-control-*.urcapx
+        if-no-files-found: error
