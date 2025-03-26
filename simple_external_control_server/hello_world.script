@@ -1,6 +1,7 @@
 
 def test_func():
   textmsg("test function")
+  popup("Hello external control", blocking = True)
 end
 
 # NODE_CONTROL_LOOP_BEGINS

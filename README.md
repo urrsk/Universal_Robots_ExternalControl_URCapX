@@ -1,6 +1,6 @@
 # External Control URCap
 
-This URCap allows you to send script code to the robot, and is primarily meant for connecting the robot to the Universal ROS/ROS2 driver, Isaac Sim driver, and the Universal Robots Client Library.
+This URCap allows you to inject script code to the robot, and is primarily meant for connecting the robot to the Universal ROS/ROS 2 driver and the Universal Robots Client Library.
 
 
 ## Build and Deploy Sample
