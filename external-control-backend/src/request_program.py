@@ -57,7 +57,7 @@ class RequestProgram(object):
         try:
             # Create a socket connection with the robot IP and port number defined above
             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            s.settimeout(0.1)
+            s.settimeout(1.0)
             s.connect((self.robotIP, self.port))
             s.sendall(command.encode('us-ascii'))
             # Receive script code
